@@ -115,7 +115,7 @@
 
 
 
-REPLACER
+REPLACER --- Use this for template updating. Filled with dummy find/replace text. 
 
     ---GROUP---
 
@@ -123,11 +123,13 @@ REPLACER
         
         CUSTSERVEMAIL. (the email address for Customer Service inquiries)
 
-        MYACCOUNTFULLURL
+        MYACCOUNTFULLURL (no http)
 
         CONTACTSURL
 
         PRIVACYPOLICYURL
+
+        SUBSCRIBEURL (no http)
 
     ---SITE---
 
@@ -166,17 +168,26 @@ REPLACER
         .bodyMock {height: 1000px !important;}
 
         /* CLIENT-SPECIFIC STYLES */
+        .footerBttnWide a {transition: all 0.2s ease-in-out; }
+        .footerBttnWide:hover a { background-color: #3a3a3a !important;  box-shadow: 0px 0px 5px 4px #e7e7e7, 0px 20px 20px -15px #556270; transition: all 0.2s ease-in-out; }        
+        .footerBttnWide:hover v:fill { color: #3a3a3a !important;  box-shadow: 0px 0px 5px 4px #e7e7e7, 0px 20px 20px -15px #556270; transition: all 0.2s ease-in-out; }        
         .footerBttns-Container .footerBttns-Buttons .footerBttns a,p {  transition: all 0.2s ease-in-out; }
         .footerBttns-Container:hover .footerBttns-Buttons .footerBttns a {background-color: #fff !important; transition: all 0.2s ease-in-out; }
+        .footerBttns-Container .footerBttns-Buttons .footerBttns v:roundrect,v:fill {  transition: all 0.2s ease-in-out; }
+        .footerBttns-Container:hover .footerBttns-Buttons .footerBttns v:fill {color: #fff !important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container:hover .footerBttns-Buttons .footerBttns2 a {background-color: #fff !important; transition: all 0.2s ease-in-out; }
+        .footerBttns-Container:hover .footerBttns-Buttons .footerBttns2 v:fill {color: #fff !important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container:hover .footerBttns-Buttons .footerBttns p {color: #fff!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container:hover .footerBttns-Buttons .footerBttns2 p {color: #fff!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container:hover .footerBttns-Label p {color: #fff!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container .footerBttns-Group:hover .footerBttns a {background-color: #0086ff!important; transition: all 0.2s ease-in-out; }
+        .footerBttns-Container .footerBttns-Group:hover .footerBttns v:fill {color: #0086ff!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container .footerBttns-Group:hover .footerBttns p {color: #9e9e9d!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container .footerBttns-Buttons :hover.footerBttns a {background-color: #1C1E22!important; transition: all 0.2s ease-in-out; }
+        .footerBttns-Container .footerBttns-Buttons :hover.footerBttns v:fill {color: #1C1E22!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container .footerBttns-Buttons :hover.footerBttns2 a {background-color: #1C1E22!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container .footerBttns-Group2:hover .footerBttns a {background-color: #fff!important; transition: all 0.2s ease-in-out; }
+        .footerBttns-Container .footerBttns-Group2:hover .footerBttns v:fill {color: #fff!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container .footerBttns-Buttons :hover.footerBttns2 p {color: #1C1E22!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container .footerBttns-Buttons :hover.footerBttns p {color: #1C1E22!important; transition: all 0.2s ease-in-out; }
         .footerBttns-Container .footerBttns-Group:hover p {color: #1C1E22!important; transition: all 0.2s ease-in-out; }
@@ -245,15 +256,19 @@ REPLACER
 		/* MOBILE / TABLET */
 		@media all and (max-width:639px){ 
 			/*MOBILE FOOTER BUTTON STYLES*/
-            .footerBttns-Container  { width:318px!important; height: 96px !important;  padding: 0 !important;}
-            .footerBttns-Group,.footerBttns-Group2  { width:106px!important; padding: 0 !important; }
-            .footerBttns-Buttons { width:106px!important; padding: 0 !important; }
+            .footerBttnWide a { width:240px!important; height: 48px !important; line-height: 48px !important; padding: 0 !important;}
+            .footerBttnWide v:rect { width:265px!important; height: 48px !important; line-height: 48px !important; padding: 0 !important;}
+            .footerBttns-Container  { width:265px!important; height: 96px !important;  padding: 0 !important;}
+            .footerBttns-Group { width:106px!important; padding: 0 !important; }
+            .footerBttns-Group2  { width:53px!important; padding: 0 !important; }
+            .footerBttns-Buttons { width:53px!important; padding: 0 !important; }
 			.footerBttns,.footerBttns2 { width:53px!important; height: 64px !important; padding: 0 !important; }
 			.footerBttns table,.footerBttns2 table { width:53px!important; height:64px!important; }
 			.footerBttns a,.footerBttns2 a { background-size: 48px !important; width:48px!important; line-height: 48px !important; height:48px!important; }
 			.footerBttns v:roundrect { background-size: 48px !important; width:48px!important; line-height: 48px !important; height:48px!important; }
             .footerBttns p,.footerBttns2 p { font-size:10px !important; line-height:0 !important; color: #556270 !important;}
-            .footerBttns-Label { width:106px!important; height: 20px !important;}
+            .footerBttns-Group .footerBttns-Label { width:106px!important; height: 20px !important;}
+            .footerBttns-Group2 .footerBttns-Label { width:53px!important; height: 20px !important;}
             .footerBttns-Label p { font-size:12px !important; line-height:1px !important }
             .mobile-flogorule { width:138px!important; padding: 0 !important; }    
             .mobile-reps { width:176px!important; height:140px !important; padding: 0 !important; }
@@ -337,7 +352,7 @@ REPLACER
 		max-width:0px;
 		opacity:0;
 		overflow:hidden;">
-        SectionTitle00, coming MONTH&nbsp;&#8203;00 to Dummy Sitename<!--Z-->!
+        SectionTitle00, coming MONTH&nbsp;&#8203;00 to Dummy Sitename!
         </td>
     </tr>
 </table>
@@ -403,7 +418,7 @@ REPLACER
                                     <tr>
                                         <td align="center" valign="top">
                                             <h2 class="h2-text-resize" style="font-family: 'Playfair Display', Georgia, serif, roman; mso-ascii-font-family:'Playfair Display', Georgia, serif, roman; mso-ansi-font-weight: 900; font-weight: 900; font-optical-sizing: none;  font-style: normal; display: inline-block; font-size: 24px; line-height: 1.5; color: #e7e7e7; letter-spacing: -0.25px; -webkit-font-smoothing: antialiased; font-kerning: normal; text-wrap: balance; text-rendering: optimizeLegibility">
-                                                <span style="color: #0086ff;">SectionTitle00,</span> coming <nobr>MONTH&nbsp;&#8203;00</nobr> to <nobr>Dummy Sitename<!--Z--></nobr>.
+                                                <span style="color: #0086ff;">SectionTitle00,</span> coming <nobr>MONTH&nbsp;&#8203;00</nobr> to <nobr>Dummy Sitename</nobr>.
                                             </h2>
                                         </td>
                                     </tr>
@@ -672,7 +687,7 @@ REPLACER
                                     <table class="mobile-320" role="presentation" width="300" cellpadding="0" cellspacing="0" border="0" style="width: 300px;">
                                         <tr>
                                         <td class="imgresize100" align="center" valign="top">
-                                            <a rel="noopener" href="PUGPIGFULLURL" target="_blank"><img src="https://media.sailthru.com/fss/fld6id/2ea147ac-d0f8-44ad-9596-4faf35dbb20d/FLOGOB_AL_Huntsville.png" width="300" style="margin:0; padding:0; border:none; display:block; width: 300px;" border="0" alt="SITENAMEspc0nZ logo" /></a>
+                                            <a rel="noopener" href="https://PUGPIGFULLURL" target="_blank"><img src="https://media.sailthru.com/fss/fld6id/2ea147ac-d0f8-44ad-9596-4faf35dbb20d/FLOGOB_AL_Huntsville.png" width="300" style="margin:0; padding:0; border:none; display:block; width: 300px;" border="0" alt="SITENAMEspc0nZ logo" /></a>
                                         </td>
                                         </tr>
                                         <!--SPACER--><tr><td height="40" style="font-size:10px; line-height:1px;">&nbsp;<br></td></tr>
@@ -844,7 +859,7 @@ REPLACER
                                                                                             <center style="color:transparent;font-family:sans-serif;font-size:1px;line-height:56px"></center>
                                                                                         </v:roundrect>
                                                                                         <![endif]--><a href="MYACCOUNTFULLURL"
-                                                                                        style="background-color:#0086ff;background-image:url(https://media.sailthru.com/fss/fld6id/59472bd6-f751-4399-a0c7-e808befdfd81/HELP+lt_account.png);background-size: 56px; background-repeat: no-repeat; background-position: center middle;border:1px solid #e7e7e7;border-radius:28px;color:transparent;display:inline-block;font-family:sans-serif;font-size:1px;font-weight:bold;line-height:56px;text-align:center;text-decoration:none;width:56px;-webkit-text-size-adjust:none;mso-hide:all;"alt="MyAccountDOTCOM.com">account</a>
+                                                                                        style="background-color:#0086ff;background-image:url(https://media.sailthru.com/fss/fld6id/59472bd6-f751-4399-a0c7-e808befdfd81/HELP+lt_account.png);background-size: 56px; background-repeat: no-repeat; background-position: center middle;border:1px solid #e7e7e7;border-radius:28px;color:transparent;display:inline-block;font-family:sans-serif;font-size:1px;font-weight:bold;line-height:56px;text-align:center;text-decoration:none;width:56px;-webkit-text-size-adjust:none;mso-hide:all;"alt="MyAccountDOTCOM">account</a>
                                                                                     </td>
                                                                                 </tr>
                                                                             </table>
@@ -965,8 +980,8 @@ REPLACER
                             <table class="mobile-300" role="presentation" width="400" cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                     <td align="center" valign="top">
-                                        <p style="color:#1C1E22; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; color:#1C1E22; font-size:12px; line-height:20px; font-weight: 500; text-wrap: pretty;">
-                                            <span style="font-weight: 900; color: #0086ff;">SITENAMEspc0nZ. </span>PHYSICALADDRESS. <span style="color: #556270;">To ensure receipt of our emails, please add <a rel="noopener" href="mailto:customercare@sts.DOTCOM.com" target="_blank" style="color:#556270; text-decoration:underline;">customercare@sts.DOTCOM.com</a> to your address book or a safe sender list. You received this email because you are a subscriber to <a rel="noopener" href="https://www.DOTCOM.com/" class="hovertext"  target="_blank" style="color:#556270; text-decoration:none;">DOTCOM.com</a> or <a rel="noopener" href="PUGPIGFULLURL" class="hovertext"  target="_blank" style="color:#556270; text-decoration:none;">SITENAME</a>. Click&nbsp;here&nbsp;to&nbsp;<a rel="noopener" href="{optout_confirm_url + '&list_param=' + blast.list}" class="hoverText" target="_blank" style="color:#556270; text-decoration:underline;">Unsubscribe.</a></span></p>
+                                        <p style="color:#1C1E22; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; color:#1C1E22; font-size:12px; line-height:20px; font-weight: 500; text-wrap: balance;">
+                                             <span style="font-weight: 900; color: #0086ff; text-transform: capitalize;">SITENAMEspc0nZ. </span>PHYSICALADDRESS. <span style="color: #556270;">To ensure receipt of our emails, please add <a rel="noopener" href="mailto:customercare@sts.DOTCOM.com" target="_blank" style="color:#556270; text-decoration:underline; text-transform: lowercase;">customercare@sts.DOTCOM.com</a> to your address book or a safe sender list. You received this email because you are a subscriber to <a rel="noopener" href="https://www.DOTCOM.com/" class="hovertext"  target="_blank" style="color:#556270; text-decoration:none;">DOTCOM.com</a> or <a rel="noopener" href="https://PUGPIGFULLURL" class="hovertext"  target="_blank" style="color:#556270; text-decoration:none;">SITENAME</a>. Click&nbsp;here&nbsp;to&nbsp;<a rel="noopener" href="{optout_confirm_url + '&list_param=' + blast.list}" class="hoverText" target="_blank" style="color:#556270; text-decoration:underline;">Unsubscribe.</a></span></p>
                                     </td>
                                 </tr>
                                 <!--SPACER--><tr><td height="20" style="font-size:10px; line-height:1px;">&nbsp;<br></td></tr>
